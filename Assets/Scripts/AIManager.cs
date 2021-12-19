@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class AIManager : MonoBehaviour
 {
-    public float speed = 5.0f;
-    
-    private float MovementX;
-    private float MovementY;
+    public float speed;
+    public float MovementX;
+    public float MovementY;
 
     protected float Health;
     protected float Armor;
