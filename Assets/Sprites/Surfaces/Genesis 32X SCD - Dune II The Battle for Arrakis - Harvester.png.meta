@@ -1,0 +1,790 @@
+fileFormatVersion: 2
+guid: ee286b379902e4040852b0fda5919154
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6628276500005743584
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_0
+  - first:
+      213: -530648574827905769
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_1
+  - first:
+      213: -3666710073553750866
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_2
+  - first:
+      213: 6983051794171394958
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_3
+  - first:
+      213: 7988869219859062631
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_4
+  - first:
+      213: -6479909896685329415
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_5
+  - first:
+      213: -4457311080081095388
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_6
+  - first:
+      213: 2309090059617392674
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_7
+  - first:
+      213: -4096067049804375033
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_8
+  - first:
+      213: -8354493012592808073
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_9
+  - first:
+      213: -3392438231201425332
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_10
+  - first:
+      213: 7352966648802740208
+    second: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 6, y: 89, z: 71, w: 2}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 89
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024961034a1a304a0800000000000000
+      internalID: -6628276500005743584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 91
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71db0d4cee1c2a8f0800000000000000
+      internalID: -530648574827905769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 96
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea47b7b7d9a3d1dc0800000000000000
+      internalID: -3666710073553750866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 55
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b7db7eb98c8e060800000000000000
+      internalID: 6983051794171394958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 57
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f50c68a3a2ede60800000000000000
+      internalID: 7988869219859062631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 62
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3688fe74cb216a0800000000000000
+      internalID: -6479909896685329415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 21
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4258a5240337422c0800000000000000
+      internalID: -4457311080081095388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 23
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22851e5dc298b0020800000000000000
+      internalID: 2309090059617392674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 28
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c5a3858b8d727c0800000000000000
+      internalID: -4096067049804375033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f2ce97ed0ee0c80800000000000000
+      internalID: -8354493012592808073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 3
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48d8c21763abe0d0800000000000000
+      internalID: -3392438231201425332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Dune II The Battle for Arrakis - Harvester_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f78e2b953cfa0660800000000000000
+      internalID: 7352966648802740208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -26.5, y: -56}
+      - {x: -23.5, y: -59}
+      - {x: -15.5, y: -60}
+      - {x: -11.5, y: -56}
+      - {x: -7.5, y: -60}
+      - {x: -0.5, y: -61}
+      - {x: 0.5, y: -60}
+      - {x: 3.5, y: -60}
+      - {x: 8.5, y: -56}
+      - {x: 8.5, y: -54}
+      - {x: 6.5, y: -52}
+      - {x: 6.5, y: -51}
+      - {x: 7.5, y: -50}
+      - {x: 7.5, y: -48}
+      - {x: 0.5, y: -41}
+      - {x: -2.5, y: -41}
+      - {x: -4.5, y: -43}
+      - {x: -5.5, y: -42}
+      - {x: -8.5, y: -42}
+      - {x: -11.5, y: -45}
+      - {x: -14.5, y: -42}
+      - {x: -18.5, y: -42}
+      - {x: -19.5, y: -43}
+      - {x: -22.5, y: -43}
+      - {x: -25.5, y: -45}
+      - {x: -25.5, y: -47}
+      - {x: -29.5, y: -43}
+      - {x: -31.5, y: -43}
+      - {x: -32.5, y: -42}
+      - {x: -25.5, y: -42}
+      - {x: -21.5, y: -38}
+      - {x: -21.5, y: -17}
+      - {x: -22.5, y: -16}
+      - {x: -23.5, y: -12}
+      - {x: -26.5, y: -9}
+      - {x: -28.5, y: -9}
+      - {x: -29.5, y: -8}
+      - {x: -25.5, y: -8}
+      - {x: -21.5, y: -4}
+      - {x: -21.5, y: 17}
+      - {x: -22.5, y: 18}
+      - {x: -23.5, y: 22}
+      - {x: -26.5, y: 25}
+      - {x: -28.5, y: 25}
+      - {x: -29.5, y: 26}
+      - {x: -25.5, y: 26}
+      - {x: -21.5, y: 30}
+      - {x: -21.5, y: 51}
+      - {x: -22.5, y: 52}
+      - {x: -23.5, y: 56}
+      - {x: -26.5, y: 59}
+      - {x: -28.5, y: 59}
+      - {x: -30.5, y: 61}
+      - {x: -34.5, y: 61}
+      - {x: -36.5, y: 59}
+      - {x: -38.5, y: 59}
+      - {x: -41.5, y: 56}
+      - {x: -42.5, y: 52}
+      - {x: -43.5, y: 51}
+      - {x: -43.5, y: 30}
+      - {x: -39.5, y: 26}
+      - {x: -35.5, y: 26}
+      - {x: -36.5, y: 25}
+      - {x: -38.5, y: 25}
+      - {x: -41.5, y: 22}
+      - {x: -42.5, y: 18}
+      - {x: -43.5, y: 17}
+      - {x: -43.5, y: -4}
+      - {x: -39.5, y: -8}
+      - {x: -35.5, y: -8}
+      - {x: -36.5, y: -9}
+      - {x: -38.5, y: -9}
+      - {x: -41.5, y: -12}
+      - {x: -42.5, y: -16}
+      - {x: -43.5, y: -17}
+      - {x: -43.5, y: -38}
+      - {x: -40.5, y: -42}
+      - {x: -38.5, y: -42}
+      - {x: -41.5, y: -42}
+      - {x: -44.5, y: -45}
+      - {x: -44.5, y: -50}
+      - {x: -45.5, y: -51}
+      - {x: -45.5, y: -53}
+      - {x: -44.5, y: -54}
+      - {x: -44.5, y: -57}
+      - {x: -40.5, y: -61}
+      - {x: -36.5, y: -60}
+      - {x: -35.5, y: -61}
+      - {x: -32.5, y: -61}
+      - {x: -27.5, y: -56}
+    - - {x: 10.5, y: -31}
+      - {x: 14.5, y: -35}
+      - {x: 35.5, y: -35}
+      - {x: 36.5, y: -34}
+      - {x: 40.5, y: -33}
+      - {x: 43.5, y: -30}
+      - {x: 43.5, y: -28}
+      - {x: 45.5, y: -26}
+      - {x: 45.5, y: -22}
+      - {x: 43.5, y: -20}
+      - {x: 43.5, y: -18}
+      - {x: 40.5, y: -15}
+      - {x: 36.5, y: -14}
+      - {x: 35.5, y: -13}
+      - {x: 14.5, y: -13}
+      - {x: 10.5, y: -16}
+      - {x: 10.5, y: -13}
+      - {x: 7.5, y: -10}
+      - {x: 4.5, y: -10}
+      - {x: 3.5, y: -9}
+      - {x: -2.5, y: -9}
+      - {x: -4.5, y: -11}
+      - {x: -5.5, y: -11}
+      - {x: -16.5, y: -21}
+      - {x: -18.5, y: -22}
+      - {x: -18.5, y: -24}
+      - {x: -20.5, y: -26}
+      - {x: -20.5, y: -30}
+      - {x: -10.5, y: -40}
+      - {x: -5.5, y: -40}
+      - {x: 9.5, y: -25}
+      - {x: 9.5, y: -24}
+      - {x: 10.5, y: -23}
+    - - {x: 10.5, y: 3}
+      - {x: 14.5, y: -1}
+      - {x: 35.5, y: -1}
+      - {x: 36.5, y: 0}
+      - {x: 40.5, y: 1}
+      - {x: 43.5, y: 4}
+      - {x: 43.5, y: 6}
+      - {x: 45.5, y: 8}
+      - {x: 45.5, y: 12}
+      - {x: 43.5, y: 14}
+      - {x: 43.5, y: 16}
+      - {x: 40.5, y: 19}
+      - {x: 36.5, y: 20}
+      - {x: 35.5, y: 21}
+      - {x: 14.5, y: 21}
+      - {x: 10.5, y: 18}
+      - {x: 10.5, y: 21}
+      - {x: 7.5, y: 24}
+      - {x: 4.5, y: 24}
+      - {x: 3.5, y: 25}
+      - {x: -2.5, y: 25}
+      - {x: -4.5, y: 23}
+      - {x: -5.5, y: 23}
+      - {x: -16.5, y: 13}
+      - {x: -18.5, y: 12}
+      - {x: -18.5, y: 10}
+      - {x: -20.5, y: 8}
+      - {x: -20.5, y: 4}
+      - {x: -10.5, y: -6}
+      - {x: -5.5, y: -6}
+      - {x: 9.5, y: 9}
+      - {x: 9.5, y: 10}
+      - {x: 10.5, y: 11}
+    - - {x: 10.5, y: 37}
+      - {x: 14.5, y: 33}
+      - {x: 35.5, y: 33}
+      - {x: 36.5, y: 34}
+      - {x: 40.5, y: 35}
+      - {x: 43.5, y: 38}
+      - {x: 43.5, y: 40}
+      - {x: 45.5, y: 42}
+      - {x: 45.5, y: 46}
+      - {x: 43.5, y: 48}
+      - {x: 43.5, y: 50}
+      - {x: 40.5, y: 53}
+      - {x: 36.5, y: 54}
+      - {x: 35.5, y: 55}
+      - {x: 14.5, y: 55}
+      - {x: 10.5, y: 52}
+      - {x: 10.5, y: 55}
+      - {x: 7.5, y: 58}
+      - {x: 4.5, y: 58}
+      - {x: 3.5, y: 59}
+      - {x: -2.5, y: 59}
+      - {x: -4.5, y: 57}
+      - {x: -5.5, y: 57}
+      - {x: -16.5, y: 47}
+      - {x: -18.5, y: 46}
+      - {x: -18.5, y: 44}
+      - {x: -20.5, y: 42}
+      - {x: -20.5, y: 38}
+      - {x: -10.5, y: 28}
+      - {x: -5.5, y: 28}
+      - {x: 9.5, y: 43}
+      - {x: 9.5, y: 44}
+      - {x: 10.5, y: 45}
+    physicsShape:
+    - - {x: -26.5, y: -56}
+      - {x: -23.5, y: -59}
+      - {x: -15.5, y: -60}
+      - {x: -11.5, y: -56}
+      - {x: -7.5, y: -60}
+      - {x: -0.5, y: -61}
+      - {x: 0.5, y: -60}
+      - {x: 3.5, y: -60}
+      - {x: 8.5, y: -56}
+      - {x: 8.5, y: -54}
+      - {x: 6.5, y: -52}
+      - {x: 6.5, y: -51}
+      - {x: 7.5, y: -50}
+      - {x: 7.5, y: -48}
+      - {x: 0.5, y: -41}
+      - {x: -2.5, y: -41}
+      - {x: -4.5, y: -43}
+      - {x: -5.5, y: -42}
+      - {x: -8.5, y: -42}
+      - {x: -11.5, y: -45}
+      - {x: -14.5, y: -42}
+      - {x: -18.5, y: -42}
+      - {x: -19.5, y: -43}
+      - {x: -22.5, y: -43}
+      - {x: -25.5, y: -45}
+      - {x: -25.5, y: -47}
+      - {x: -29.5, y: -43}
+      - {x: -31.5, y: -43}
+      - {x: -32.5, y: -42}
+      - {x: -25.5, y: -42}
+      - {x: -21.5, y: -38}
+      - {x: -21.5, y: -17}
+      - {x: -22.5, y: -16}
+      - {x: -23.5, y: -12}
+      - {x: -26.5, y: -9}
+      - {x: -28.5, y: -9}
+      - {x: -29.5, y: -8}
+      - {x: -25.5, y: -8}
+      - {x: -21.5, y: -4}
+      - {x: -21.5, y: 17}
+      - {x: -22.5, y: 18}
+      - {x: -23.5, y: 22}
+      - {x: -26.5, y: 25}
+      - {x: -28.5, y: 25}
+      - {x: -29.5, y: 26}
+      - {x: -25.5, y: 26}
+      - {x: -21.5, y: 30}
+      - {x: -21.5, y: 51}
+      - {x: -22.5, y: 52}
+      - {x: -23.5, y: 56}
+      - {x: -26.5, y: 59}
+      - {x: -28.5, y: 59}
+      - {x: -30.5, y: 61}
+      - {x: -34.5, y: 61}
+      - {x: -36.5, y: 59}
+      - {x: -38.5, y: 59}
+      - {x: -41.5, y: 56}
+      - {x: -42.5, y: 52}
+      - {x: -43.5, y: 51}
+      - {x: -43.5, y: 30}
+      - {x: -39.5, y: 26}
+      - {x: -35.5, y: 26}
+      - {x: -36.5, y: 25}
+      - {x: -38.5, y: 25}
+      - {x: -41.5, y: 22}
+      - {x: -42.5, y: 18}
+      - {x: -43.5, y: 17}
+      - {x: -43.5, y: -4}
+      - {x: -39.5, y: -8}
+      - {x: -35.5, y: -8}
+      - {x: -36.5, y: -9}
+      - {x: -38.5, y: -9}
+      - {x: -41.5, y: -12}
+      - {x: -42.5, y: -16}
+      - {x: -43.5, y: -17}
+      - {x: -43.5, y: -38}
+      - {x: -40.5, y: -42}
+      - {x: -38.5, y: -42}
+      - {x: -41.5, y: -42}
+      - {x: -44.5, y: -45}
+      - {x: -44.5, y: -50}
+      - {x: -45.5, y: -51}
+      - {x: -45.5, y: -53}
+      - {x: -44.5, y: -54}
+      - {x: -44.5, y: -57}
+      - {x: -40.5, y: -61}
+      - {x: -36.5, y: -60}
+      - {x: -35.5, y: -61}
+      - {x: -32.5, y: -61}
+      - {x: -27.5, y: -56}
+    - - {x: 10.5, y: -31}
+      - {x: 14.5, y: -35}
+      - {x: 35.5, y: -35}
+      - {x: 36.5, y: -34}
+      - {x: 40.5, y: -33}
+      - {x: 43.5, y: -30}
+      - {x: 43.5, y: -28}
+      - {x: 45.5, y: -26}
+      - {x: 45.5, y: -22}
+      - {x: 43.5, y: -20}
+      - {x: 43.5, y: -18}
+      - {x: 40.5, y: -15}
+      - {x: 36.5, y: -14}
+      - {x: 35.5, y: -13}
+      - {x: 14.5, y: -13}
+      - {x: 10.5, y: -16}
+      - {x: 10.5, y: -13}
+      - {x: 7.5, y: -10}
+      - {x: 4.5, y: -10}
+      - {x: 3.5, y: -9}
+      - {x: -2.5, y: -9}
+      - {x: -4.5, y: -11}
+      - {x: -5.5, y: -11}
+      - {x: -16.5, y: -21}
+      - {x: -18.5, y: -22}
+      - {x: -18.5, y: -24}
+      - {x: -20.5, y: -26}
+      - {x: -20.5, y: -30}
+      - {x: -10.5, y: -40}
+      - {x: -5.5, y: -40}
+      - {x: 9.5, y: -25}
+      - {x: 9.5, y: -24}
+      - {x: 10.5, y: -23}
+    - - {x: 10.5, y: 3}
+      - {x: 14.5, y: -1}
+      - {x: 35.5, y: -1}
+      - {x: 36.5, y: 0}
+      - {x: 40.5, y: 1}
+      - {x: 43.5, y: 4}
+      - {x: 43.5, y: 6}
+      - {x: 45.5, y: 8}
+      - {x: 45.5, y: 12}
+      - {x: 43.5, y: 14}
+      - {x: 43.5, y: 16}
+      - {x: 40.5, y: 19}
+      - {x: 36.5, y: 20}
+      - {x: 35.5, y: 21}
+      - {x: 14.5, y: 21}
+      - {x: 10.5, y: 18}
+      - {x: 10.5, y: 21}
+      - {x: 7.5, y: 24}
+      - {x: 4.5, y: 24}
+      - {x: 3.5, y: 25}
+      - {x: -2.5, y: 25}
+      - {x: -4.5, y: 23}
+      - {x: -5.5, y: 23}
+      - {x: -16.5, y: 13}
+      - {x: -18.5, y: 12}
+      - {x: -18.5, y: 10}
+      - {x: -20.5, y: 8}
+      - {x: -20.5, y: 4}
+      - {x: -10.5, y: -6}
+      - {x: -5.5, y: -6}
+      - {x: 9.5, y: 9}
+      - {x: 9.5, y: 10}
+      - {x: 10.5, y: 11}
+    - - {x: 10.5, y: 37}
+      - {x: 14.5, y: 33}
+      - {x: 35.5, y: 33}
+      - {x: 36.5, y: 34}
+      - {x: 40.5, y: 35}
+      - {x: 43.5, y: 38}
+      - {x: 43.5, y: 40}
+      - {x: 45.5, y: 42}
+      - {x: 45.5, y: 46}
+      - {x: 43.5, y: 48}
+      - {x: 43.5, y: 50}
+      - {x: 40.5, y: 53}
+      - {x: 36.5, y: 54}
+      - {x: 35.5, y: 55}
+      - {x: 14.5, y: 55}
+      - {x: 10.5, y: 52}
+      - {x: 10.5, y: 55}
+      - {x: 7.5, y: 58}
+      - {x: 4.5, y: 58}
+      - {x: 3.5, y: 59}
+      - {x: -2.5, y: 59}
+      - {x: -4.5, y: 57}
+      - {x: -5.5, y: 57}
+      - {x: -16.5, y: 47}
+      - {x: -18.5, y: 46}
+      - {x: -18.5, y: 44}
+      - {x: -20.5, y: 42}
+      - {x: -20.5, y: 38}
+      - {x: -10.5, y: 28}
+      - {x: -5.5, y: 28}
+      - {x: 9.5, y: 43}
+      - {x: 9.5, y: 44}
+      - {x: 10.5, y: 45}
+    - - {x: -8.5, y: 9}
+      - {x: -8.5, y: 9}
+      - {x: -2.5, y: 9}
+      - {x: -2.5, y: 9}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
