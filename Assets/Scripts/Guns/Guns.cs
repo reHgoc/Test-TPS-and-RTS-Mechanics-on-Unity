@@ -38,8 +38,10 @@ public class Guns
             case 0:
             {
                     guns = TypeOfGun.pistol;
+                    Mass = 0.375f;
+                    StartCountBullets = 7;
                     NameOfGun = guns.ToString();
-                    Debug.Log(NameOfGun);   
+                    Debug.Log($"This gun is {NameOfGun} \nwith mass: {Mass} \nand bullets count: {StartCountBullets}");   
                     break;
             }
             case 1:
