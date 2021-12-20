@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 986272419}
   - component: {fileID: 986272418}
   - component: {fileID: 986272417}
+  - component: {fileID: 986272420}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -236,7 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90657c65fa7ed74288e59f86c496146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
+  MovementX: 0
+  MovementY: 0
 --- !u!212 &986272418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -303,6 +306,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &986272420
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986272416}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02, y: 0.13}
+  serializedVersion: 2
+  m_Radius: 0.23
 --- !u!1 &1063860044
 GameObject:
   m_ObjectHideFlags: 0

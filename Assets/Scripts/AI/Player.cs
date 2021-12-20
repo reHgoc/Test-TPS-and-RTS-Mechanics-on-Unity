@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : AIManager
 {
     private GameObject Enemy;
+    private Guns m_Guns = new Guns();
 
     // Start is called before the first frame update
     void Start()
@@ -12,8 +13,10 @@ public class Player : AIManager
         Health = 100.0f;
 
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
-
+        
         speed = 10.0f;
+
+        m_Guns.ChoisingGun(0);
     }
 
     // Update is called once per frame
