@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : AIManager
 {
     private GameObject Enemy;
+    //private Rigidbody2D rb;
 
     private Guns m_Guns = new Guns();
     private Bullets m_Bullets = new Bullets();
@@ -16,9 +17,10 @@ public class Player : AIManager
 
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
         
-        speed = 10.0f;
+        speed = 0.5f;
 
         m_Guns.ChoisingGun(0); // tested gun from class Guns
+        //rb = GetComponent<Rigidbody2D>();
 
     }
 
@@ -31,9 +33,23 @@ public class Player : AIManager
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle + 90f);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Health = m_Bullets.TakeDamage(Health);
+            Debug.Log($"Damage: {m_Bullets.dmg.ToString()} Health {Health}");
+            
+        }
+        if (Health <= 0)
+            Death();
+    }
+
+    private void FixedUpdate()
+    {
         MovementX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        MovementY += Input.GetAxis("Vertical")   * speed * Time.deltaTime;
+        MovementY += Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
         transform.position = new Vector2(MovementX, MovementY);
+        //rb.velocity = new Vector2(MovementX, MovementY);
+        
     }
 }

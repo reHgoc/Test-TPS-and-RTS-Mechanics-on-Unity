@@ -15,6 +15,8 @@ public class Guns
     private float reloadSpeed;
     private float Mass;
 
+    
+
     public float Reload(float CountTimer, int CurrentCountBullets) // Reloading gun
     {
        CountTimer = reloadSpeed - Time.deltaTime;

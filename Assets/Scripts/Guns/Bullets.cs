@@ -9,12 +9,12 @@ public class Bullets
                                 sgFlame, sgPlazma, sgGauss,
                                 Gauss, riPlazma, riGauss };
 
-    private float dmg;
+    public float dmg = 10f;
     private float speed;
+    TypeOfBullets bullets;
 
-    public float TakeDamage(TypeOfBullets bullets)
+    public float TakeDamage(float damage)
     {
-        float  damage;
         string b_name;
 
         switch (bullets)
@@ -69,12 +69,14 @@ public class Bullets
                 break;
             default:
                 bullets = TypeOfBullets.standart;
+                dmg = 20f;
                 break;
 
 
         }
         b_name = bullets.ToString();
-        return damage = dmg;
+
+        return damage -= dmg;
         
     }
 }

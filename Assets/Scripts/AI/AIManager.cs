@@ -11,8 +11,6 @@ public class AIManager : MonoBehaviour
     protected float Health;
     protected float Armor;
 
-
-
     public void RotationToObject(Transform rotObject)
     {
         Vector2 direction = rotObject.position - transform.position;
@@ -20,5 +18,10 @@ public class AIManager : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle + 90f);
+    }
+
+    public void Death()
+    {
+        Debug.Log("Dead");
     }
 }
