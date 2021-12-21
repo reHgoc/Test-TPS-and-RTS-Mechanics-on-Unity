@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Guns
 {
+    /*
+     * REchange enum on array
+     * in methods ChoisingGun change switch on for
+     */
     Bullets.TypeOfBullets bullets;
 
     public enum TypeOfGun { 

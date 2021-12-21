@@ -52,10 +52,10 @@ public class Player : AIManager
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            for(int i = 0; i <=  i++)
+           /* for(int i = 0; i <=  i++)
              {
                  m_Guns.Reload(m_Guns.ChoisingGun(++i));
-             }
+             }*/
         }
            
     }
