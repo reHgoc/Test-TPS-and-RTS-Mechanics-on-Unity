@@ -5,7 +5,10 @@ using UnityEngine;
 public class Player : AIManager
 {
     private GameObject Enemy;
-    //private Rigidbody2D rb;
+
+    private Vector2 movement;
+
+    [SerializeField]private Rigidbody2D rb;
 
     private Guns m_Guns = new Guns();
     private Bullets m_Bullets = new Bullets();
@@ -17,10 +20,12 @@ public class Player : AIManager
 
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
         
-        speed = 0.5f;
+        speed = 5.0f;
 
         m_Guns.ChoisingGun(0); // tested gun from class Guns
         //rb = GetComponent<Rigidbody2D>();
+
+        
 
     }
 
@@ -33,6 +38,9 @@ public class Player : AIManager
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle + 90f);
 
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Health = m_Bullets.TakeDamage(Health);
@@ -41,15 +49,28 @@ public class Player : AIManager
         }
         if (Health <= 0)
             Death();
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            for(int i = 0; i <=  i++)
+             {
+                 m_Guns.Reload(m_Guns.ChoisingGun(++i));
+             }
+        }
+           
     }
 
     private void FixedUpdate()
     {
-        MovementX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        MovementY += Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        //Other methods for moving
 
-        transform.position = new Vector2(MovementX, MovementY);
+        //MovementX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        //MovementY += Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        //transform.position = new Vector2(MovementX, MovementY);
         //rb.velocity = new Vector2(MovementX, MovementY);
+        //transform.Translate(new Vector3(MovementX, MovementY, 0f));
+
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         
     }
 }

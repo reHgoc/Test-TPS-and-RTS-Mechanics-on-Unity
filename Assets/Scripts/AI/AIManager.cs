@@ -5,8 +5,8 @@ using UnityEngine;
 public class AIManager : MonoBehaviour
 {
     public float speed;
-    public float MovementX;
-    public float MovementY;
+    //public float MovementX;
+    //public float MovementY;
 
     protected float Health;
     protected float Armor;
