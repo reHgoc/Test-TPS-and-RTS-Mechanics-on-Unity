@@ -4,32 +4,20 @@ using UnityEngine;
 
 public class Player : AIManager
 {
-    private GameObject Enemy;
-
     private Vector2 movement;
 
     [SerializeField]private Rigidbody2D rb;
 
-    private Guns m_Guns = new Guns();
+    private GunManager m_Guns = new GunManager();
     private Bullets m_Bullets = new Bullets();
 
-    // Start is called before the first frame update
     void Start()
     {
         Health = 100.0f;
-
-        Enemy = GameObject.FindGameObjectWithTag("Enemy");
-        
         speed = 5.0f;
-
-        m_Guns.ChoisingGun(0); // tested gun from class Guns
-        //rb = GetComponent<Rigidbody2D>();
-
-        
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -44,19 +32,11 @@ public class Player : AIManager
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Health = m_Bullets.TakeDamage(Health);
-            Debug.Log($"Damage: {m_Bullets.dmg.ToString()} Health {Health}");
-            
+            Debug.Log(Health);
         }
         if (Health <= 0)
             Death();
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-           /* for(int i = 0; i <=  i++)
-             {
-                 m_Guns.Reload(m_Guns.ChoisingGun(++i));
-             }*/
-        }
            
     }
 
@@ -73,4 +53,5 @@ public class Player : AIManager
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         
     }
+
 }
