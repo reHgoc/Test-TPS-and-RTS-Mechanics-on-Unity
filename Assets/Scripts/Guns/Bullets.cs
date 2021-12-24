@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullets 
+public class Bullets : MonoBehaviour
 {
     public enum TypeOfBullets { standart, flame, rocket,
                                 plazma, riFlame, pistFlame,
@@ -16,7 +16,16 @@ public class Bullets
     {
 
         return health -= dmg;
-        
+
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 
 }
