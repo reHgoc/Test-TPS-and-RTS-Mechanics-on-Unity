@@ -51,6 +51,8 @@ public class Player : AIManager
         //transform.Translate(new Vector3(MovementX, MovementY, 0f));
 
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+
+
         
     }
 

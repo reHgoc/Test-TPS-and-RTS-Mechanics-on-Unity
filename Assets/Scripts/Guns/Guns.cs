@@ -7,6 +7,10 @@ public class Guns : MonoBehaviour
 {
     public Sprite image;
 
+    public GameObject[] GunTipes;
+           GameObject CurrentGun;
+    public int GunId;
+
     public enum TypeOfGun { 
         pistol, riffle, rocketLauncher,
         shotGun, miniGun, uzi, gaussGun,
@@ -19,8 +23,21 @@ public class Guns : MonoBehaviour
 
     public float reloadSpeed;
     public float Mass;
+    public float ShootSpeed;
 
 
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            Destroy(this.gameObject);
+            //change weapon and bullets from id
+            CurrentGun = GunTipes[this.GunId]; //Error  
+            Debug.Log(CurrentGun.name);
+        }
+    }
     /*   public int ChoisingGun(int id_Gun)
        {
            TypeOfGun guns;

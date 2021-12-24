@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+
 
 public class GunManager : Guns
 {
-    Bullets bullet = new Bullets();
+    Bullets bullet;
 
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
-
     private void Start()
     {
         CurrentCountBullets = StartCountBullets;
-        bullet.speed = 20.0f; //temporary
+
     }
 
     public void Reload()                                // Reloading gun
@@ -35,13 +36,26 @@ public class GunManager : Guns
         
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
         Rigidbody2D rb = bul.GetComponent<Rigidbody2D>();
-        rb.AddForce(BulletPoint.right * bullet.speed, ForceMode2D.Impulse);
+        rb.AddForce(BulletPoint.right * ShootSpeed, ForceMode2D.Impulse);
 
     }
 
-     void Update()
+
+    void Update()
     {
         if (Input.GetButtonDown("Fire1"))
             Shoot();
+
     }
+
+    
+
+    public void ChangeWeapon()
+    {
+        //Do change weapon
+
+
+    }
+
+
 }

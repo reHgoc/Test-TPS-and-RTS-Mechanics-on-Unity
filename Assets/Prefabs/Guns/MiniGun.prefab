@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &666082594579488423
+--- !u!1 &8383052787119592892
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3436636214549885467}
-  - component: {fileID: 3174471064896127389}
-  - component: {fileID: 7558553544424913547}
+  - component: {fileID: 8383052787119592871}
+  - component: {fileID: 8383052787119592864}
+  - component: {fileID: 8383052787119592865}
+  - component: {fileID: 8383052787119592867}
   m_Layer: 0
-  m_Name: RocketLauncher
+  m_Name: MiniGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3436636214549885467
+--- !u!4 &8383052787119592871
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666082594579488423}
+  m_GameObject: {fileID: 8383052787119592892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3174471064896127389
+--- !u!212 &8383052787119592864
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666082594579488423}
+  m_GameObject: {fileID: 8383052787119592892}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,34 +73,49 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 5953905298149580538, guid: 751a234acc243c34a97b9cc9af03c20a, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 30a97cb93e8f5a242b972497ea49fcaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.76, y: 0.32}
+  m_Size: {x: 1.65, y: 0.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7558553544424913547
+--- !u!58 &8383052787119592865
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383052787119592892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0077135563, y: -0.009641826}
+  serializedVersion: 2
+  m_Radius: 0.49035817
+--- !u!114 &8383052787119592867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666082594579488423}
+  m_GameObject: {fileID: 8383052787119592892}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14382727576e09e439a6b31318384409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 5953905298149580538, guid: 751a234acc243c34a97b9cc9af03c20a, type: 3}
+  image: {fileID: 21300000, guid: 30a97cb93e8f5a242b972497ea49fcaa, type: 3}
   GunTipes: []
-  Id: 1
-  StartCountBullets: 1
-  reloadSpeed: 1.375
-  Mass: 7.51
-  ShootSpeed: 0
+  StartCountBullets: 200
+  reloadSpeed: 10
+  Mass: 22.37
+  ShootSpeed: 12.37

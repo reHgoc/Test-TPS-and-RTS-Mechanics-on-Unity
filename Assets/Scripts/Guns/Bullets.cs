@@ -8,9 +8,10 @@ public class Bullets : MonoBehaviour
                                 plazma, riFlame, pistFlame,
                                 sgFlame, sgPlazma, sgGauss,
                                 Gauss, riPlazma, riGauss };
+    
 
     public float dmg;
-    public float speed;
+
 
     public float TakeDamage(float health)
     {
@@ -27,5 +28,7 @@ public class Bullets : MonoBehaviour
 
         }
     }
+
+
 
 }
