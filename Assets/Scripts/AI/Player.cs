@@ -29,11 +29,7 @@ public class Player : AIManager
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Health = m_Bullets.TakeDamage(Health);
-            Debug.Log(Health);
-        }
+       
         if (Health <= 0)
             Death();
 

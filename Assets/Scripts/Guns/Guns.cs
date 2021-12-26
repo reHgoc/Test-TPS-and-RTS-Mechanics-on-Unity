@@ -23,10 +23,6 @@ public class Guns : MonoBehaviour
 
     public float reloadSpeed;
     public float Mass;
-    public float ShootSpeed;
-
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

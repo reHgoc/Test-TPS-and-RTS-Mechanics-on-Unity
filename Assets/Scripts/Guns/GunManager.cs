@@ -7,13 +7,13 @@ using UnityEditor;
 public class GunManager : Guns
 {
     Bullets bullet;
-
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
     private void Start()
     {
         CurrentCountBullets = StartCountBullets;
+        bullet = GetComponentInChildren<Bullets>();
 
     }
 
@@ -35,8 +35,8 @@ public class GunManager : Guns
     {
         
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
-        Rigidbody2D rb = bul.GetComponent<Rigidbody2D>();
-        rb.AddForce(BulletPoint.right * ShootSpeed, ForceMode2D.Impulse);
+        //Rigidbody2D rb = bul.GetComponent<Rigidbody2D>();
+        //rb.AddForce(BulletPoint.right * bullet.speed, ForceMode2D.Impulse);
 
     }
 

@@ -11,7 +11,7 @@ public class Bullets : MonoBehaviour
     
 
     public float dmg;
-
+    public float speed;
 
     public float TakeDamage(float health)
     {
