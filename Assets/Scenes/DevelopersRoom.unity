@@ -268,10 +268,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 30a97cb93e8f5a242b972497ea49fcaa, type: 3}
+  GunTipes: []
+  GunId: 0
   StartCountBullets: 200
   reloadSpeed: 10
   Mass: 22.37
-  ShootSpeed: 12.37
 --- !u!58 &953263474
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -282,8 +283,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0077135563, y: -0.009641826}
   serializedVersion: 2
@@ -389,6 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  Damage: 0
   rb: {fileID: 986272421}
 --- !u!212 &986272418
 SpriteRenderer:
@@ -507,10 +509,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+  GunTipes: []
+  GunId: 0
   StartCountBullets: 0
   reloadSpeed: 0
   Mass: 0
-  ShootSpeed: 0
   BulletPrefab: {fileID: 1545855392071994685, guid: e35c2e20f26d6854ebc4856c0045045f, type: 3}
   BulletPoint: {fileID: 295434770}
 --- !u!114 &986272423
@@ -526,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0
+  speed: 0
 --- !u!1 &1063860044
 GameObject:
   m_ObjectHideFlags: 0

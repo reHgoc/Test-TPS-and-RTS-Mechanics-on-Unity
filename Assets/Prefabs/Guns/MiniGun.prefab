@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8383052787119592892
+--- !u!1 &3434681868593360378
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8383052787119592871}
-  - component: {fileID: 8383052787119592864}
-  - component: {fileID: 8383052787119592865}
-  - component: {fileID: 8383052787119592867}
+  - component: {fileID: 3434681868593360353}
+  - component: {fileID: 3434681868593360358}
+  - component: {fileID: 3434681868593360359}
+  - component: {fileID: 3434681868593360357}
   m_Layer: 0
   m_Name: MiniGun
-  m_TagString: Untagged
+  m_TagString: Weapons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8383052787119592871
+--- !u!4 &3434681868593360353
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383052787119592892}
+  m_GameObject: {fileID: 3434681868593360378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8383052787119592864
+--- !u!212 &3434681868593360358
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383052787119592892}
+  m_GameObject: {fileID: 3434681868593360378}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8383052787119592865
+--- !u!58 &3434681868593360359
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383052787119592892}
+  m_GameObject: {fileID: 3434681868593360378}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -101,21 +101,20 @@ CircleCollider2D:
   m_Offset: {x: -0.0077135563, y: -0.009641826}
   serializedVersion: 2
   m_Radius: 0.49035817
---- !u!114 &8383052787119592867
+--- !u!114 &3434681868593360357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383052787119592892}
+  m_GameObject: {fileID: 3434681868593360378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14382727576e09e439a6b31318384409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 30a97cb93e8f5a242b972497ea49fcaa, type: 3}
-  GunTipes: []
+  Gun: 4
   StartCountBullets: 200
   reloadSpeed: 10
   Mass: 22.37
-  ShootSpeed: 12.37

@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TypeOfGun
+{
+    pistol, riffle, rocketLauncher,
+    shotGun, miniGun, uzi, gaussGun,
+    plazmaGun, plazmaRiffle, plazmashotgun,
+    electroGun, fireGun, freezeGun, pulseGun,
+    fireWorks, rocketRiffle, miniRocketGun
+};
 
 public class Guns : MonoBehaviour
 {
     public Sprite image;
-
-    public GameObject[] GunTipes;
-           GameObject CurrentGun;
-    public int GunId;
-
-    public enum TypeOfGun { 
-        pistol, riffle, rocketLauncher,
-        shotGun, miniGun, uzi, gaussGun,
-        plazmaGun, plazmaRiffle, plazmashotgun,
-        electroGun, fireGun, freezeGun, pulseGun,
-        fireWorks, rocketRiffle, miniRocketGun };
+    public TypeOfGun Gun;
 
     public    int   StartCountBullets;
     protected int   CurrentCountBullets;
@@ -24,16 +22,7 @@ public class Guns : MonoBehaviour
     public float reloadSpeed;
     public float Mass;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-        {
-            Destroy(this.gameObject);
-            //change weapon and bullets from id
-            CurrentGun = GunTipes[this.GunId]; //Error  
-            Debug.Log(CurrentGun.name);
-        }
-    }
+    
     /*   public int ChoisingGun(int id_Gun)
        {
            TypeOfGun guns;

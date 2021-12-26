@@ -6,15 +6,15 @@ using UnityEditor;
 
 public class GunManager : Guns
 {
-    Bullets bullet;
     public GameObject BulletPrefab;
     public Transform BulletPoint;
+
+    TypeOfGun CurrentGun;
 
     private void Start()
     {
         CurrentCountBullets = StartCountBullets;
-        bullet = GetComponentInChildren<Bullets>();
-
+        CurrentGun = TypeOfGun.pistol;
     }
 
     public void Reload()                                // Reloading gun
@@ -26,8 +26,7 @@ public class GunManager : Guns
         {
             CurrentCountBullets = StartCountBullets;
             CountTimer = reloadSpeed;
-        }
-        Debug.Log($"{Guns.TypeOfGun.fireGun} reloading with a speed {reloadSpeed}");
+        }   
 
     }
 
@@ -35,8 +34,6 @@ public class GunManager : Guns
     {
         
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
-        //Rigidbody2D rb = bul.GetComponent<Rigidbody2D>();
-        //rb.AddForce(BulletPoint.right * bullet.speed, ForceMode2D.Impulse);
 
     }
 
@@ -48,14 +45,10 @@ public class GunManager : Guns
 
     }
 
-    
-
-    public void ChangeWeapon()
+    public void ChangeWeapon(TypeOfGun GunForChange)
     {
         //Do change weapon
-
-
+        Gun = GunForChange;
     }
-
 
 }

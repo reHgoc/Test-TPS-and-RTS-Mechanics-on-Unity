@@ -8,7 +8,8 @@ public class Player : AIManager
 
     [SerializeField]private Rigidbody2D rb;
 
-    private GunManager m_Guns = new GunManager();
+    private GunManager m_GunManager = new GunManager();
+    private Guns m_Guns = new Guns();
     private Bullets m_Bullets = new Bullets();
 
     void Start()
@@ -46,10 +47,21 @@ public class Player : AIManager
         //rb.velocity = new Vector2(MovementX, MovementY);
         //transform.Translate(new Vector3(MovementX, MovementY, 0f));
 
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);  //better methods for moving
+  
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Weapons")
+        {
+            Destroy(collision.gameObject);
+            var weapon = collision.GetComponentInChildren<Guns>().Gun;
+            m_GunManager.ChangeWeapon(weapon);
 
-        
+            Debug.Log(m_GunManager.Gun);
+
+        }
     }
 
 }
