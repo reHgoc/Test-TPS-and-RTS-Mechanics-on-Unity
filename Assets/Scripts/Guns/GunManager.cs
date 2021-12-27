@@ -9,24 +9,24 @@ public class GunManager : Guns
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
-    TypeOfGun CurrentGun;
+    private IEnumerator reloadCoroutine;
+    private bool isCanShoot;
 
     private void Start()
     {
+        reloadCoroutine = Reload();
         CurrentCountBullets = StartCountBullets;
-        CurrentGun = TypeOfGun.pistol;
+        isCanShoot = true;
+        
     }
 
-    public void Reload()                                // Reloading gun
+    public IEnumerator Reload()                                // Reloading gun
     {
-        float CountTimer;
-        CountTimer = reloadSpeed - Time.deltaTime;
 
-        if (CountTimer <= 0)
-        {
-            CurrentCountBullets = StartCountBullets;
-            CountTimer = reloadSpeed;
-        }   
+       yield return new WaitForSeconds(reloadSpeed);
+
+       CurrentCountBullets = StartCountBullets;
+       isCanShoot = true;
 
     }
 
@@ -34,21 +34,35 @@ public class GunManager : Guns
     {
         
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
+        CurrentCountBullets -= 1;
 
     }
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && CurrentCountBullets >= 0 && isCanShoot == true)
             Shoot();
+        if (CurrentCountBullets == 0)
+        {
+            isCanShoot = false;
+            StopCoroutine(reloadCoroutine);
+        }
+        if (isCanShoot == true)
+            StopCoroutine(reloadCoroutine);    //Need to stoped reloading when we change weapon
 
     }
 
-    public void ChangeWeapon(TypeOfGun GunForChange)
+    public void ChangeWeapon(Guns GunForChange)
     {
+        isCanShoot = true;
         //Do change weapon
-        Gun = GunForChange;
+        Gun                 = GunForChange.Gun;
+        CurrentCountBullets = GunForChange.StartCountBullets;
+        StartCountBullets   = GunForChange.StartCountBullets;
+        reloadSpeed         = GunForChange.reloadSpeed;
+        Mass                = GunForChange.Mass;
+        
     }
 
 }

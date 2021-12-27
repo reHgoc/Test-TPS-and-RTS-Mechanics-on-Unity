@@ -390,9 +390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   Gun: 0
-  StartCountBullets: 0
-  reloadSpeed: 0
-  Mass: 0
+  StartCountBullets: 2
+  reloadSpeed: 15.12
+  Mass: 0.312
   BulletPrefab: {fileID: 1545855392071994685, guid: e35c2e20f26d6854ebc4856c0045045f, type: 3}
   BulletPoint: {fileID: 295434770}
 --- !u!1 &1063860044

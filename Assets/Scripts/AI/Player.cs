@@ -56,10 +56,12 @@ public class Player : AIManager
         if(collision.gameObject.tag == "Weapons")
         {
             Destroy(collision.gameObject);
-            var weapon = collision.GetComponentInChildren<Guns>().Gun;
+            var weapon = collision.GetComponentInChildren<Guns>();
+            m_Guns = weapon;
             m_GunManager.ChangeWeapon(weapon);
-
-            Debug.Log(m_GunManager.Gun);
+            //m_GunManager.StartCountBullets = weapon.StartCountBullets;
+            //m_GunManager.reloadSpeed = weapon.reloadSpeed;
+            Debug.Log(m_GunManager.Gun + " " + m_GunManager.StartCountBullets + " " + m_GunManager.reloadSpeed);
 
         }
     }
