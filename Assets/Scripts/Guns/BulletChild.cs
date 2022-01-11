@@ -12,7 +12,7 @@ public class BulletChild : Bullets
         rb = GetComponent<Rigidbody2D>();
         GM = GameObject.Find("Player").GetComponent<GunManager>();
 
-        Invoke("DestroyBullet", 8.7f);
+        Invoke("DestroyBullet", 4.3f);
     }
     private void FixedUpdate()
     {

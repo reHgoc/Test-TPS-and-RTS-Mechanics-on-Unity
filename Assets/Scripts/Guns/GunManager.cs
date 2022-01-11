@@ -9,7 +9,6 @@ public class GunManager : Guns
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
-    private Coroutine reloadCoroutine;
     private bool isCanShoot;
 
 
@@ -18,25 +17,22 @@ public class GunManager : Guns
         
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
+        print(CurrentCountBullets);
         
     }
 
-    void Reload()
+    void BreakingReloading()
     {
-        if (reloadCoroutine != null) StopCoroutine(reloadCoroutine);
-        reloadCoroutine = StartCoroutine(ReloadCoroutine());
-        isCanShoot = true;
+        StopCoroutine(ReloadCoroutine());
     }
 
     public IEnumerator ReloadCoroutine()                                // Reloading gun
     {
-
-        while(!isCanShoot)
-        {
-            CurrentCountBullets = StartCountBullets;
             yield return new WaitForSeconds(reloadSpeed);
-        }
-
+            CurrentCountBullets = StartCountBullets;
+            isCanShoot = true;
+        print($"now is {CurrentCountBullets}");
+        BreakingReloading();
     }
 
     public void Shoot()
@@ -52,20 +48,18 @@ public class GunManager : Guns
     {
         if (Input.GetButtonDown("Fire1") && CurrentCountBullets >= 0 && isCanShoot == true)
             Shoot();
-        if (CurrentCountBullets <= 0)
+        if (CurrentCountBullets == 0)
         {
             isCanShoot = false;
-            Reload();
+            StartCoroutine(ReloadCoroutine());
         }
 
-        if(Input.GetKeyDown(KeyCode.T))
-            StopCoroutine(reloadCoroutine);
 
     }
 
     public void ChangeWeapon(Guns GunForChange)
     {
-        isCanShoot = true;
+        BreakingReloading();
         //Do change weapon
         Gun                 = GunForChange.Gun;
         CurrentCountBullets = GunForChange.StartCountBullets;
