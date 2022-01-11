@@ -11,9 +11,19 @@ public class BulletChild : Bullets
     {
         rb = GetComponent<Rigidbody2D>();
         GM = GameObject.Find("Player").GetComponent<GunManager>();
+
+        Invoke("DestroyBullet", 8.7f);
     }
     private void FixedUpdate()
     {
         rb.AddForce(GM.BulletPoint.right * speed, ForceMode2D.Impulse);
     }
+
+    public void DestroyBullet()
+    {
+        Destroy(this.gameObject);
+
+    }
 }
+
+

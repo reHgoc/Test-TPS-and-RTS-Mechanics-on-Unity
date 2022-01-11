@@ -9,24 +9,33 @@ public class GunManager : Guns
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
-    private IEnumerator reloadCoroutine;
+    private Coroutine reloadCoroutine;
     private bool isCanShoot;
+
 
     private void Start()
     {
-        reloadCoroutine = Reload();
+        
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
         
     }
 
-    public IEnumerator Reload()                                // Reloading gun
+    void Reload()
+    {
+        if (reloadCoroutine != null) StopCoroutine(reloadCoroutine);
+        reloadCoroutine = StartCoroutine(ReloadCoroutine());
+        isCanShoot = true;
+    }
+
+    public IEnumerator ReloadCoroutine()                                // Reloading gun
     {
 
-       yield return new WaitForSeconds(reloadSpeed);
-
-       CurrentCountBullets = StartCountBullets;
-       isCanShoot = true;
+        while(!isCanShoot)
+        {
+            CurrentCountBullets = StartCountBullets;
+            yield return new WaitForSeconds(reloadSpeed);
+        }
 
     }
 
@@ -43,13 +52,14 @@ public class GunManager : Guns
     {
         if (Input.GetButtonDown("Fire1") && CurrentCountBullets >= 0 && isCanShoot == true)
             Shoot();
-        if (CurrentCountBullets == 0)
+        if (CurrentCountBullets <= 0)
         {
             isCanShoot = false;
-            StopCoroutine(reloadCoroutine);
+            Reload();
         }
-        if (isCanShoot == true)
-            StopCoroutine(reloadCoroutine);    //Need to stoped reloading when we change weapon
+
+        if(Input.GetKeyDown(KeyCode.T))
+            StopCoroutine(reloadCoroutine);
 
     }
 

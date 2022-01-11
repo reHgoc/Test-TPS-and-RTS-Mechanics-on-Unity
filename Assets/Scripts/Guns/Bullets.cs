@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TypeOfBullets
+{
+    standart, flame, rocket,
+    plazma, riFlame, pistFlame,
+    sgFlame, sgPlazma, sgGauss,
+    Gauss, riPlazma, riGauss
+};
+
 public class Bullets : MonoBehaviour
 {
-    public enum TypeOfBullets { standart, flame, rocket,
-                                plazma, riFlame, pistFlame,
-                                sgFlame, sgPlazma, sgGauss,
-                                Gauss, riPlazma, riGauss };
-    
-
+    TypeOfBullets BullTypes;
+ 
     public float dmg;
     public float speed;
+
+    
 
     public float TakeDamage(float health)
     {
