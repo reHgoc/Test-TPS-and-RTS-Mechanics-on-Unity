@@ -19,10 +19,13 @@ public class Guns : MonoBehaviour
     public    int   StartCountBullets;
     protected int   CurrentCountBullets;
 
-    public float reloadSpeed;
-    public float Mass;
+    public    float reloadSpeed;
+    public    float Mass;
+    protected float StartFireRange;
+    public    float FireRange;
 
-    
+   
+
     /*   public int ChoisingGun(int id_Gun)
        {
            TypeOfGun guns;

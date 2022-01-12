@@ -9,57 +9,57 @@ public class GunManager : Guns
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
+    private IEnumerator Reload;
     private bool isCanShoot;
+    
 
 
     private void Start()
     {
-        
+        Reload = ReloadCoroutine();
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
-        print(CurrentCountBullets);
         
     }
 
     void BreakingReloading()
     {
-        StopCoroutine(ReloadCoroutine());
+        StopCoroutine(Reload);
+        isCanShoot = true;
     }
 
     public IEnumerator ReloadCoroutine()                                // Reloading gun
     {
-            yield return new WaitForSeconds(reloadSpeed);
-            CurrentCountBullets = StartCountBullets;
-            isCanShoot = true;
-        print($"now is {CurrentCountBullets}");
-        BreakingReloading();
+        isCanShoot = false;
+        yield return new WaitForSeconds(reloadSpeed);
+        CurrentCountBullets = StartCountBullets;
+        isCanShoot = true;
     }
 
     public void Shoot()
-    {
-        
-        GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
+    { 
+        GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject; 
         CurrentCountBullets -= 1;
-
     }
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && CurrentCountBullets >= 0 && isCanShoot == true)
-            Shoot();
-        if (CurrentCountBullets == 0)
+        if (Input.GetButtonDown("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
         {
-            isCanShoot = false;
-            StartCoroutine(ReloadCoroutine());
+            Shoot();
         }
-
-
+        if (CurrentCountBullets == 0 && isCanShoot == true)
+        {
+            StartCoroutine(Reload);
+        }
     }
+
 
     public void ChangeWeapon(Guns GunForChange)
     {
-        BreakingReloading();
+        
+        
         //Do change weapon
         Gun                 = GunForChange.Gun;
         CurrentCountBullets = GunForChange.StartCountBullets;

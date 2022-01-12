@@ -59,8 +59,6 @@ public class Player : AIManager
             var weapon = collision.GetComponentInChildren<Guns>();
             m_Guns = weapon;
             m_GunManager.ChangeWeapon(weapon);
-            //m_GunManager.StartCountBullets = weapon.StartCountBullets;
-            //m_GunManager.reloadSpeed = weapon.reloadSpeed;
             Debug.Log(m_GunManager.Gun + " " + m_GunManager.StartCountBullets + " " + m_GunManager.reloadSpeed);
 
         }
