@@ -6,11 +6,13 @@ using UnityEditor;
 
 public class GunManager : Guns
 {
+    public List<Guns> GunsList = new List<Guns>();
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
     private IEnumerator Reload;
     private bool isCanShoot;
+
     
 
 
@@ -58,14 +60,31 @@ public class GunManager : Guns
 
     public void ChangeWeapon(Guns GunForChange)
     {
+        if(Reload != null)
+        {
+
+            BreakingReloading();
+        }
+
+        foreach(Guns NewGun in GunsList)
+        {
+            if(NewGun.name == GunForChange.name)
+            {
+                //Do change weapon
+                /* Gun = NewGun.Gun;
+                 CurrentCountBullets = GunForChange.StartCountBullets;
+                 StartCountBullets = GunForChange.StartCountBullets;
+                 reloadSpeed = GunForChange.reloadSpeed;
+                 Mass = GunForChange.Mass;
+                */
+                NewGun.Gun = Gun;
+                NewGun.StartCountBullets = StartCountBullets;
+                NewGun.reloadSpeed = reloadSpeed;
+                NewGun.Mass = Mass;
+            }
+            
+        }
         
-        
-        //Do change weapon
-        Gun                 = GunForChange.Gun;
-        CurrentCountBullets = GunForChange.StartCountBullets;
-        StartCountBullets   = GunForChange.StartCountBullets;
-        reloadSpeed         = GunForChange.reloadSpeed;
-        Mass                = GunForChange.Mass;
         
     }
 
