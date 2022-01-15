@@ -8,15 +8,13 @@ public class Player : AIManager
 
     [SerializeField]private Rigidbody2D rb;
 
-    private GunManager m_GunManager = new GunManager();
-    private Guns m_Guns = new Guns();
-    private Bullets m_Bullets = new Bullets();
+    private GunManager m_GunManager;
 
     void Start()
     {
         Health = 100.0f;
         speed = 5.0f;
-
+        m_GunManager = GetComponentInChildren<GunManager>();
     }
 
     void Update()
@@ -43,23 +41,23 @@ public class Player : AIManager
 
         //MovementX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         //MovementY += Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        //transform.position = new Vector2(MovementX, MovementY);
+        //transform.position = new Vector2(MovementX, MovementY); //without physics (only on coordinates)
         //rb.velocity = new Vector2(MovementX, MovementY);
         //transform.Translate(new Vector3(MovementX, MovementY, 0f));
 
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);  //better methods for moving
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);  //better methods for moving (with use physics)
   
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)                         // For pick up items (weapons or bonus)
     {
         if(collision.gameObject.tag == "Weapons")
         {
+            
+            var weapon = collision.GetComponent<Guns>();
+            m_GunManager.ChangeWeapon(weapon);                                  // Weapon changing 
+            //print(m_GunManager.CurrentGun.Gun + " 1");
             Destroy(collision.gameObject);
-            var weapon = collision.GetComponentInChildren<Guns>();
-            m_Guns = weapon;
-            m_GunManager.ChangeWeapon(weapon);
-            Debug.Log(m_GunManager.Gun + " " + m_GunManager.StartCountBullets + " " + m_GunManager.reloadSpeed);
 
         }
     }

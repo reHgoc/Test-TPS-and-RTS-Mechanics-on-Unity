@@ -6,31 +6,32 @@ using UnityEditor;
 
 public class GunManager : Guns
 {
-    public List<Guns> GunsList = new List<Guns>();
+    public Guns CurrentGun;
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
-    private IEnumerator Reload;
     private bool isCanShoot;
+    private bool isReloaded;
 
     
 
 
     private void Start()
     {
-        Reload = ReloadCoroutine();
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
-        
+        CurrentGun = GetComponent<Guns>();
+        //print(CurrentGun.Gun);
+ 
     }
 
     void BreakingReloading()
     {
-        StopCoroutine(Reload);
+        StopCoroutine(ReloadCoroutine());
         isCanShoot = true;
     }
 
-    public IEnumerator ReloadCoroutine()                                // Reloading gun
+    public IEnumerator ReloadCoroutine()                                                        // Reloading gun
     {
         isCanShoot = false;
         yield return new WaitForSeconds(reloadSpeed);
@@ -42,6 +43,7 @@ public class GunManager : Guns
     { 
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject; 
         CurrentCountBullets -= 1;
+        
     }
 
 
@@ -51,41 +53,35 @@ public class GunManager : Guns
         {
             Shoot();
         }
+        
+        
+    }
+
+    private void LateUpdate()
+    {
         if (CurrentCountBullets == 0 && isCanShoot == true)
         {
-            StartCoroutine(Reload);
+            StartCoroutine(ReloadCoroutine());
         }
     }
 
 
-    public void ChangeWeapon(Guns GunForChange)
+    public void ChangeWeapon(Guns GunForChange)                                         // Change weapon (call from Player scripts)
     {
-        if(Reload != null)
+        if (ReloadCoroutine() != null)
         {
-
-            BreakingReloading();
+            BreakingReloading();                                                       // Stop reloading when new weapon picked up 
         }
-
-        foreach(Guns NewGun in GunsList)
-        {
-            if(NewGun.name == GunForChange.name)
-            {
-                //Do change weapon
-                /* Gun = NewGun.Gun;
-                 CurrentCountBullets = GunForChange.StartCountBullets;
-                 StartCountBullets = GunForChange.StartCountBullets;
-                 reloadSpeed = GunForChange.reloadSpeed;
-                 Mass = GunForChange.Mass;
-                */
-                NewGun.Gun = Gun;
-                NewGun.StartCountBullets = StartCountBullets;
-                NewGun.reloadSpeed = reloadSpeed;
-                NewGun.Mass = Mass;
-            }
             
-        }
-        
+
+          CurrentGun = GunForChange;
+          Gun = GunForChange.Gun;
+          CurrentCountBullets = GunForChange.StartCountBullets;
+          StartCountBullets = GunForChange.StartCountBullets;
+          reloadSpeed = GunForChange.reloadSpeed;
+          Mass = GunForChange.Mass;
         
     }
+
 
 }
