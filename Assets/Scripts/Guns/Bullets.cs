@@ -17,6 +17,8 @@ public class Bullets : MonoBehaviour
     public float dmg;
     public float speed;
 
+    public int BulletId;
+
     
 
     public float TakeDamage(float health)
@@ -35,6 +37,13 @@ public class Bullets : MonoBehaviour
         }
     }
 
+    public void ChangeBullet(int id, Bullets bul)
+    {
+        BullTypes = bul.BullTypes;
+        dmg       = bul.dmg;
+        speed     = bul.speed;
+        BulletId  = id;
+    }
 
 
 }

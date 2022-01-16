@@ -10,6 +10,8 @@ public class GunManager : Guns
     public GameObject BulletPrefab;
     public Transform BulletPoint;
 
+    Bullets bullets;
+
     private bool isCanShoot;
     private bool isReloaded;
 
@@ -21,6 +23,7 @@ public class GunManager : Guns
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
         CurrentGun = GetComponent<Guns>();
+        bullets = GetComponent<Bullets>();
         //print(CurrentGun.Gun);
  
     }
@@ -80,6 +83,8 @@ public class GunManager : Guns
           StartCountBullets = GunForChange.StartCountBullets;
           reloadSpeed = GunForChange.reloadSpeed;
           Mass = GunForChange.Mass;
+
+        
         
     }
 

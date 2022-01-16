@@ -16,6 +16,7 @@ public class Guns : MonoBehaviour
     public Sprite image;
     public TypeOfGun Gun;
 
+    public    int WeaponId;
     public    int StartCountBullets;
     protected int CurrentCountBullets;
 
