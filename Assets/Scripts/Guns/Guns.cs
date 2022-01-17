@@ -22,8 +22,8 @@ public class Guns : MonoBehaviour
 
     public    float reloadSpeed;
     public    float Mass;
-    protected float StartFireRange;
     public    float FireRange;
+    protected float FireTime;
 
 
     /*   public int ChoisingGun(int id_Gun)

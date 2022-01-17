@@ -20,10 +20,12 @@ public class GunManager : Guns
 
     private void Start()
     {
+        FireTime = 0f;
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
+
         CurrentGun = GetComponent<Guns>();
-        bullets = GetComponent<Bullets>();
+        bullets    = GetComponent<Bullets>();
         //print(CurrentGun.Gun);
  
     }
@@ -42,10 +44,17 @@ public class GunManager : Guns
         isCanShoot = true;
     }
 
-    public void Shoot()
-    { 
-        GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject; 
+    public IEnumerator Shoot()
+    {
+
+    
+        GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
         CurrentCountBullets -= 1;
+
+        yield return 0.03F;
+      
+
+        
         
     }
 
@@ -54,8 +63,17 @@ public class GunManager : Guns
     {
         if (Input.GetButtonDown("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
         {
-            Shoot();
+            /*  FireTime = Time.time + 1/FireRange;
+             print(FireTime);
+              if(FireTime > FireRange)
+              {
+
+                 StartCoroutine(Shoot());
+              }*/
+
+            StartCoroutine(Shoot());
         }
+       
         
         
     }

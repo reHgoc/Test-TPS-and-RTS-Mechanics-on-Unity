@@ -119,4 +119,4 @@ MonoBehaviour:
   StartCountBullets: 25
   reloadSpeed: 3.12
   Mass: 0.712
-  FireRange: 0
+  FireRange: 0.312

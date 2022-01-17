@@ -8,6 +8,7 @@ TagManager:
   - Harv
   - Enemy
   - Weapons
+  - Other
   layers:
   - Default
   - TransparentFX
