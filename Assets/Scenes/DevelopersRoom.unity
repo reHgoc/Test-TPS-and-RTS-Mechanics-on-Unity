@@ -986,9 +986,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4996830680011394596, guid: d6228bd83bf15a4488450ea95267db1e, type: 3}
-      propertyPath: BulletPrefab
-      value: 
-      objectReference: {fileID: 8382069998036228874, guid: 80e78342823f8e448a95db9a55f0cb0e, type: 3}
+      propertyPath: FireRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6228bd83bf15a4488450ea95267db1e, type: 3}
 --- !u!1001 &5153513368291127691

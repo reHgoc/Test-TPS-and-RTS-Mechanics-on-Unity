@@ -100,10 +100,10 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 23b7018eda68e174ab0e60a4d67ff466, type: 3}
   Gun: 0
   WeaponId: 0
-  StartCountBullets: 2
+  StartCountBullets: 7
   reloadSpeed: 5
   Mass: 0.312
-  FireRange: 2.1
+  FireRange: 0.512
 --- !u!58 &2650109261013768448
 CircleCollider2D:
   m_ObjectHideFlags: 0

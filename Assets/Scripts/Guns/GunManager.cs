@@ -34,11 +34,13 @@ public class GunManager : Guns
     {
         StopCoroutine(ReloadCoroutine());
         isCanShoot = true;
+        FireTime = 0f;
     }
 
     public IEnumerator ReloadCoroutine()                                                        // Reloading gun
     {
         isCanShoot = false;
+        FireTime = 0f;
         yield return new WaitForSeconds(reloadSpeed);
         CurrentCountBullets = StartCountBullets;
         isCanShoot = true;
@@ -47,31 +49,26 @@ public class GunManager : Guns
     public IEnumerator Shoot()
     {
 
-    
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
         CurrentCountBullets -= 1;
+        yield return 0.03f;
 
-        yield return 0.03F;
-      
-
-        
-        
     }
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
+        if (Input.GetButton("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
         {
-            /*  FireTime = Time.time + 1/FireRange;
-             print(FireTime);
-              if(FireTime > FireRange)
-              {
+            
+            FireTime += Time.deltaTime;
+            if (FireTime > FireRange)
+            {
+                StartCoroutine(Shoot());
+                FireTime = 0.00f;
 
-                 StartCoroutine(Shoot());
-              }*/
-
-            StartCoroutine(Shoot());
+            }
+            
         }
        
         
@@ -101,6 +98,7 @@ public class GunManager : Guns
           StartCountBullets = GunForChange.StartCountBullets;
           reloadSpeed = GunForChange.reloadSpeed;
           Mass = GunForChange.Mass;
+          FireRange = GunForChange.FireRange;
 
         
         
