@@ -56,18 +56,42 @@ public class GunManager : Guns
     }
 
 
+
+
     void Update()
     {
         if (Input.GetButton("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
         {
-            
             FireTime += Time.deltaTime;
-            if (FireTime > FireRange)
-            {
-                StartCoroutine(Shoot());
-                FireTime = 0.00f;
 
+            switch (WeaponId)
+            {
+                
+                case 3:
+                    if (FireTime > FireRange)
+                    {
+                        int count = Random.RandomRange(4, 7);
+                        GameObject[] bulls = new GameObject[count];
+
+                        for(int i = 0; i<= count; i++)
+                        {
+
+                        }
+                        CurrentCountBullets -= 1;
+
+                    }
+                    break;
+                default:
+                    if (FireTime > FireRange)
+                    {
+                        StartCoroutine(Shoot());
+                        FireTime = 0.00f;
+
+                    }
+                    break;
             }
+            
+            
             
         }
        
@@ -99,7 +123,7 @@ public class GunManager : Guns
           reloadSpeed = GunForChange.reloadSpeed;
           Mass = GunForChange.Mass;
           FireRange = GunForChange.FireRange;
-
+          WeaponId = GunForChange.WeaponId;
         
         
     }

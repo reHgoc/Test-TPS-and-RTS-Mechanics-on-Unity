@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: c8c55bee589da6d45969e2cc01257358, type: 3}
   Gun: 3
-  WeaponId: 0
+  WeaponId: 3
   StartCountBullets: 8
   reloadSpeed: 8.11
   Mass: 2.09
