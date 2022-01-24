@@ -15,6 +15,8 @@ public class GunManager : Guns
     private bool isCanShoot;
     private bool isReloaded;
 
+    private Rigidbody2D RB2D;
+
     
 
 
@@ -26,6 +28,7 @@ public class GunManager : Guns
 
         CurrentGun = GetComponent<Guns>();
         bullets    = GetComponent<Bullets>();
+        RB2D       = GetComponent<Rigidbody2D>();
         //print(CurrentGun.Gun);
  
     }
@@ -46,13 +49,25 @@ public class GunManager : Guns
         isCanShoot = true;
     }
 
-    public IEnumerator Shoot()
+    public IEnumerator Shoot()                                                                  // while for rocket or same guns
     {
 
         GameObject bul = Instantiate(BulletPrefab, BulletPoint.position, BulletPoint.rotation) as GameObject;
         CurrentCountBullets -= 1;
         yield return 0.03f;
 
+    }
+
+    private IEnumerator ShootWithRay()                                                          // Shoot with raycast
+    {
+        RaycastHit2D hit = Physics2D.Raycast(BulletPoint.transform.position, Vector2.up);
+        Debug.DrawRay(BulletPoint.transform.position, Vector2.up * hit.distance, Color.green);
+
+        if (hit.collider != null)
+            print(hit.collider.name);
+
+        
+        yield return FireRange;
     }
 
 
@@ -62,15 +77,15 @@ public class GunManager : Guns
     {
         if (Input.GetButton("Fire1") && CurrentCountBullets > 0 && isCanShoot == true)
         {
-            FireTime += Time.deltaTime;
+            FireTime = Time.time + 1f / FireRange;
 
             switch (WeaponId)
             {
                 
                 case 3:
-                    if (FireTime > FireRange)
+                    if (Time.time >= FireTime)
                     {
-                        int count = Random.RandomRange(4, 7);
+                        int count = Random.Range(4, 7);
                         GameObject[] bulls = new GameObject[count];
 
                         for(int i = 0; i<= count; i++)
@@ -84,8 +99,9 @@ public class GunManager : Guns
                 default:
                     if (FireTime > FireRange)
                     {
-                        StartCoroutine(Shoot());
-                        FireTime = 0.00f;
+                        //StartCoroutine(Shoot());
+
+                        StartCoroutine(ShootWithRay());
 
                     }
                     break;
@@ -98,6 +114,9 @@ public class GunManager : Guns
         
         
     }
+
+  
+
 
     private void LateUpdate()
     {
