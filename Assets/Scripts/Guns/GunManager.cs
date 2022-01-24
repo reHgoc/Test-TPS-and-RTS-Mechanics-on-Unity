@@ -60,12 +60,8 @@ public class GunManager : Guns
 
     private IEnumerator ShootWithRay()                                                          // Shoot with raycast
     {
-        RaycastHit2D hit = Physics2D.Raycast(BulletPoint.transform.position, Vector2.up);
-        Debug.DrawRay(BulletPoint.transform.position, Vector2.up * hit.distance, Color.green);
-
-        if (hit.collider != null)
-            print(hit.collider.name);
-
+        RaycastHit2D hit = Physics2D.Raycast(BulletPoint.position, Input.mousePosition);
+        Debug.DrawRay(BulletPoint.position, Input.mousePosition, Color.green, 0.02f);
         
         yield return FireRange;
     }
